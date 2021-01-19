@@ -48,7 +48,7 @@ export const CardLoaderThree = () => (
   </ContentLoader>
 );
 
-export const CustomerDetailLoader = () => (
+export const TaskListLoader = () => (
   <ContentLoader
     speed={1}
     width="100%"

@@ -15,7 +15,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import Button from '@material-ui/core/Button';
 import InputBase from '@material-ui/core/InputBase';
 import NewTaskDialog from '../NewTaskDialog';
-import {CustomerDetailLoader} from '../ContentLoader'
+import {TaskListLoader} from '../ContentLoader'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -116,7 +116,7 @@ export default function CheckboxList() {
     setOpen(false);
   };
 
-  return <CustomerDetailLoader/>
+  return <TaskListLoader/>
 
   return (
     <div style={{marginTop: 20}}>
