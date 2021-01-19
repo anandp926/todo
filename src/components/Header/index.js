@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function MenuAppBar() {
+export default function MenuAppBar(props) {
   const classes = useStyles();
 
   return (
@@ -49,6 +49,7 @@ export default function MenuAppBar() {
           <Button><span style={{color: "#537278"}}>Logout</span></Button>
         </Toolbar>
       </AppBar>
+      {props.children}
     </div>
   );
 }
