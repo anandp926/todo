@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import { makeStyles } from '@material-ui/core/styles';
+import { HomePage } from './container/pageListAsync';
+import './App.css'
+
+const useStyles = makeStyles((theme) => ({
+  layoutMargin: {
+    marginLeft: theme.spacing(8),
+    marginRight: theme.spacing(8),
+    marginTop: 20,
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 0,
+      marginRight: 0,
+    },
+  },
+  root: {
+    flexGrow: 1,
+  },
+}));
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.root}>
+      <Header/>
+      <div className={classes.layoutMargin}>
+        <HomePage/>
+      </div>
     </div>
   );
 }
