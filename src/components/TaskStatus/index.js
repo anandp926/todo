@@ -4,7 +4,8 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import TaskCompletedNumber from '../../components/TaskCompleted';
 import LatestCreatedTask from '../../components/LatestCreatedTask';
-import TaskCompletedPieChart from '../../components/TaskCompletedPieChart'
+import TaskCompletedPieChart from '../../components/TaskCompletedPieChart';
+import {CardLoaderOne, CardLoaderTwo, CardLoaderThree} from '../../components/ContentLoader';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,9 +31,10 @@ export default function FullWidthGrid() {
           <LatestCreatedTask/>
         </Grid>
         <Grid item xs={12} sm={4}>
-          {/* <Paper className={classes.paper}> */}
-            <TaskCompletedPieChart/>
-          {/* </Paper> */}
+          <Paper className={classes.paper}>
+            {/* <TaskCompletedPieChart/> */}
+            <CardLoaderThree/>
+          </Paper>
         </Grid>
       </Grid>
     </div>
